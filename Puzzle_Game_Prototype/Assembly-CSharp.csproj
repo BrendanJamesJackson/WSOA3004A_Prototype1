@@ -63,8 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager_Script.cs" />
+    <Compile Include="Assets\Scripts\MenuManager_Script.cs" />
+    <Compile Include="Assets\Scripts\MenuOption_Script.cs" />
     <Compile Include="Assets\Scripts\Piece_Script.cs" />
     <Compile Include="Assets\Scripts\Placeholder_Script.cs" />
+    <Compile Include="Assets\Scripts\TextScene_Script.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
