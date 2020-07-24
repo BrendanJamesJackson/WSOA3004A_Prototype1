@@ -10,6 +10,7 @@ public class GameManager_Script : MonoBehaviour
 
 
     private bool complete = false;
+    private bool play = false;
 
     public GameObject complete_notification;
 
@@ -31,6 +32,7 @@ public class GameManager_Script : MonoBehaviour
 
         if (complete)
         {
+            AudPLay();
             //complete_notification.SetActive(true);
             StartCoroutine(level_complete());
         }
@@ -38,6 +40,15 @@ public class GameManager_Script : MonoBehaviour
         if (complete && Input.GetMouseButtonDown(0) && complete_notification.gameObject.activeSelf)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    void AudPLay()
+    {
+        if (!play)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+            play = true;
         }
     }
 
@@ -62,8 +73,8 @@ public class GameManager_Script : MonoBehaviour
         {
             pieces[i].GetComponent<SpriteRenderer>().color = Color.Lerp(pieces[i].GetComponent<SpriteRenderer>().color, nCol, Time.deltaTime);
         }
-        GetComponent<AudioSource>().Play();
-        yield return new WaitForSeconds(4f);
+        
+        yield return new WaitForSeconds(1.5f);
         complete_notification.SetActive(true);
     }
 }
