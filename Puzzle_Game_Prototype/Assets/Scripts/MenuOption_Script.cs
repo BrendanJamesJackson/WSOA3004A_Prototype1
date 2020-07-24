@@ -17,6 +17,7 @@ public class MenuOption_Script : MonoBehaviour
     {
         is_dragging = true;
         locked = false;
+        GetComponent<AudioSource>().Play();
     }
 
     private void OnMouseUp()

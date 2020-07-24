@@ -12,6 +12,8 @@ public class MenuManager_Script : MonoBehaviour
 
     IEnumerator SceneChange(int x)
     {
+        GetComponent<AudioSource>().Play();
+
         yield return new WaitForSeconds(.5f);
         if (x == -1)
         {

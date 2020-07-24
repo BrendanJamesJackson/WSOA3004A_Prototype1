@@ -21,6 +21,7 @@ public class Piece_Script : MonoBehaviour
     {
         isDragging = true;
         locked = false;
+        GetComponent<AudioSource>().Play();
     }
 
     public void OnMouseUp()
@@ -30,6 +31,7 @@ public class Piece_Script : MonoBehaviour
         {
             transform.position = start_position.position;
         }
+        GetComponent<AudioSource>().Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
